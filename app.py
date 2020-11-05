@@ -47,8 +47,8 @@ if id != -1:
         # Result
         result = clf.predict([value])
 
-        st.write(result)
+        st.write("Expected popularity: ", str(result[0]), "%")
     except IndexError:
-        st.write('Could not find the provided visual novel in database.')
+        st.write('Could not find the visual novel ID in database.')
 else:
     st.write('Could not find the provided visual novel in database.')
